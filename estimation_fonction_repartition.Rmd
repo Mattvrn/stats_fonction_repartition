@@ -1,0 +1,101 @@
+---
+title: "estimation_fonction_repartition"
+output: html_document
+date: "2026-09-18"
+---
+
+# Estimation de fonction de répartition
+
+## Librairies
+
+```{r}
+library(tidyverse)
+```
+
+## Estimation d'une fonction de répartition pour une exponentielle
+
+
+On définit d'abord la fonction dont on essaiera de retrouver la fonction de répartition : Exp(lambda = 2)
+
+On peut d'ailleurs tracer cette fonction de répartition (cumulative distribution)
+
+```{r}
+values_exp <- cbind(x = seq(-2, 5, 0.1), cum_x = pexp(seq(-2, 5, 0.1), rate = 2))
+
+ggplot(values_exp, aes(x = x, y = cum_x, colour = "red")) +
+  geom_line(linetype = "dashed", linewidth = 1) + 
+  labs(title = "Cumulative distribution function for rate=2",
+       x = "",
+       y= "Proba",
+       colour = "Rate") +
+  scale_colour_discrete(labels = c("rate = 2")) + 
+  theme_minimal()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
